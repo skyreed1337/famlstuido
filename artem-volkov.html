@@ -1,106 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Артём Волков | Звукорежиссёр FAML Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-200">
-
-  <!-- Хедер (такой же, как на всех страницах) -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 shadow-lg">
-    <div class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
-      <a href="index.html" class="flex items-center gap-2 z-20">
-        <i class="fas fa-head-side-vr text-2xl md:text-3xl text-amber-500"></i>
-        <span class="text-xl md:text-2xl font-black tracking-tight"><span class="text-amber-500">FAML</span> STUDIO</span>
-      </a>
-      <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-medium">
-        <a href="index.html" class="nav-link hover:text-amber-400 transition">Главная</a>
-        <a href="pesni.html" class="nav-link hover:text-amber-400 transition">Песни</a>
-        <a href="studija-zvukozapisi.html" class="nav-link hover:text-amber-400 transition">Студия</a>
-        <a href="muzyka-melodija.html" class="nav-link hover:text-amber-400 transition">Музыка</a>
-        <a href="baza-diktorov.html" class="nav-link hover:text-amber-400 transition">Дикторы</a>
-        <a href="#booking" class="nav-link hover:text-amber-400 transition">Бронирование</a>
-      </nav>
-      <a href="#booking" class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold px-5 py-2 rounded-full transition shadow-lg text-sm lg:text-base">Забронировать</a>
-      <button id="menuToggle" class="md:hidden relative z-20 w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 backdrop-blur-sm border border-white/20 hover:bg-white/10 transition">
-        <i class="fas fa-bars text-2xl text-white"></i>
-      </button>
-    </div>
-    <div id="mobileMenu" class="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out -translate-y-full md:hidden">
-      <button id="closeMenuBtn" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-500 transition z-50">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-medium">
-        <a href="index.html" class="mobile-nav-link hover:text-amber-400 transition">Главная</a>
-        <a href="pesni.html" class="mobile-nav-link hover:text-amber-400 transition">Песни</a>
-        <a href="studija-zvukozapisi.html" class="mobile-nav-link hover:text-amber-400 transition">Студия</a>
-        <a href="muzyka-melodija.html" class="mobile-nav-link hover:text-amber-400 transition">Музыка</a>
-        <a href="baza-diktorov.html" class="mobile-nav-link hover:text-amber-400 transition">Дикторы</a>
-        <a href="#booking" class="mobile-nav-link bg-amber-500 text-black px-8 py-3 rounded-full font-bold hover:bg-amber-600 transition">Забронировать</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="FAML Studio" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Биография и портфолио звукорежиссёра Артёма Волкова. Опыт 12 лет, работа с топ-артистами, примеры сведения и мастеринга."
+    />
+    <meta
+      name="keywords"
+      content="звукорежиссёр Артём Волков, портфолио звукорежиссёра, сведение мастеринг"
+    />
+    <link rel="canonical" href="https://famlstudio.ru/artem-volkov.html" />
+    <title>Артём Волков | Звукорежиссёр FAML Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-200"
+  >
+    <!-- Хедер (такой же, как на всех страницах) -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 shadow-lg"
+    >
+      <div
+        class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center gap-2 z-20">
+          <i
+            class="fas fa-head-side-vr text-2xl md:text-3xl text-amber-500"
+          ></i>
+          <span class="text-xl md:text-2xl font-black tracking-tight"
+            ><span class="text-amber-500">FAML</span> STUDIO</span
+          >
+        </a>
+        <nav
+          class="hidden md:flex items-center space-x-6 lg:space-x-8 font-medium"
+        >
+          <a href="index.html" class="nav-link hover:text-amber-400 transition"
+            >Главная</a
+          >
+          <a href="pesni.html" class="nav-link hover:text-amber-400 transition"
+            >Песни</a
+          >
+          <a
+            href="studija-zvukozapisi.html"
+            class="nav-link hover:text-amber-400 transition"
+            >Студия</a
+          >
+          <a
+            href="muzyka-melodija.html"
+            class="nav-link hover:text-amber-400 transition"
+            >Музыка</a
+          >
+          <a
+            href="baza-diktorov.html"
+            class="nav-link hover:text-amber-400 transition"
+            >Дикторы</a
+          >
+          <a href="#booking" class="nav-link hover:text-amber-400 transition"
+            >Бронирование</a
+          >
+        </nav>
+        <a
+          href="#booking"
+          class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold px-5 py-2 rounded-full transition shadow-lg text-sm lg:text-base"
+          >Забронировать</a
+        >
+        <button
+          id="menuToggle"
+          class="md:hidden relative z-20 w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 backdrop-blur-sm border border-white/20 hover:bg-white/10 transition"
+        >
+          <i class="fas fa-bars text-2xl text-white"></i>
+        </button>
       </div>
-    </div>
-  </header>
-
-  <main class="pt-24 md:pt-28">
-    <section class="container mx-auto px-5 md:px-8 py-12">
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <!-- Фото и краткая информация -->
-        <div class="bg-gray-900/50 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-          <img src="img/card1.jpeg" alt="Артём Волков" class="w-full rounded-2xl mb-6 shadow-2xl">
-          <h1 class="text-3xl md:text-4xl font-bold mb-2">Артём Волков</h1>
-          <p class="text-amber-400 text-lg mb-4">Ведущий звукорежиссёр</p>
-          <div class="flex gap-4 text-amber-400 text-xl mb-6">
-            <a href="#" class="hover:text-amber-300"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-amber-300"><i class="fab fa-telegram"></i></a>
-          </div>
-          <div class="space-y-2 text-gray-300">
-            <p><i class="fas fa-calendar-alt text-amber-500 w-6"></i> Опыт работы: 12 лет</p>
-            <p><i class="fas fa-music text-amber-500 w-6"></i> Жанры: поп, рок, рэп, татарская эстрада</p>
-            <p><i class="fas fa-trophy text-amber-500 w-6"></i> Работал с топ-артистами: Слава КПСС, Miyagi, Эндшпиль, группа «Волга-Волга»</p>
-          </div>
+      <div
+        id="mobileMenu"
+        class="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out -translate-y-full md:hidden"
+      >
+        <button
+          id="closeMenuBtn"
+          class="absolute top-6 right-6 text-white text-3xl hover:text-amber-500 transition z-50"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div
+          class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-medium"
+        >
+          <a
+            href="index.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Главная</a
+          >
+          <a
+            href="pesni.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Песни</a
+          >
+          <a
+            href="studija-zvukozapisi.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Студия</a
+          >
+          <a
+            href="muzyka-melodija.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Музыка</a
+          >
+          <a
+            href="baza-diktorov.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Дикторы</a
+          >
+          <a
+            href="#booking"
+            class="mobile-nav-link bg-amber-500 text-black px-8 py-3 rounded-full font-bold hover:bg-amber-600 transition"
+            >Забронировать</a
+          >
         </div>
+      </div>
+    </header>
 
-        <!-- Биография и портфолио -->
-        <div class="space-y-8">
-          <div class="bg-gray-900/50 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-            <h2 class="text-2xl font-bold mb-4">Биография</h2>
-            <p class="text-gray-300 leading-relaxed mb-4">
-              Артём Волков начал свой путь в музыке в 16 лет, обучаясь звукорежиссуре в Казанском музыкальном училище. После окончания СПбГИКиТ по специальности «Звукорежиссура аудиовизуальных искусств» вернулся в Казань и открыл собственную студию. За 12 лет работы записал и свел более 500 треков, включая хиты, попавшие в ротации «Нашего радио» и «Европы Плюс».
-            </p>
-            <p class="text-gray-300 leading-relaxed">
-              Артём специализируется на работе с вокалом, создании объёмного и чистого звука. Владеет уникальной методикой обработки голоса, которая позволяет раскрыть эмоциональную глубину исполнения. С 2020 года является техническим директором FAML Studio.
-            </p>
+    <main class="pt-24 md:pt-28">
+      <section class="container mx-auto px-5 md:px-8 py-12">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- Фото и краткая информация -->
+          <div
+            class="bg-gray-900/50 rounded-2xl p-6 backdrop-blur-sm border border-white/10"
+          >
+            <img
+              src="img/card1.jpeg"
+              alt="Артём Волков"
+              class="w-full rounded-2xl mb-6 shadow-2xl"
+            />
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Артём Волков</h1>
+            <p class="text-amber-400 text-lg mb-4">Ведущий звукорежиссёр</p>
+            <div class="flex gap-4 text-amber-400 text-xl mb-6">
+              <a href="#" class="hover:text-amber-300"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-amber-300"
+                ><i class="fab fa-telegram"></i
+              ></a>
+            </div>
+            <div class="space-y-2 text-gray-300">
+              <p>
+                <i class="fas fa-calendar-alt text-amber-500 w-6"></i> Опыт
+                работы: 12 лет
+              </p>
+              <p>
+                <i class="fas fa-music text-amber-500 w-6"></i> Жанры: поп, рок,
+                рэп, татарская эстрада
+              </p>
+              <p>
+                <i class="fas fa-trophy text-amber-500 w-6"></i> Работал с
+                топ-артистами: Слава КПСС, Miyagi, Эндшпиль, группа
+                «Волга-Волга»
+              </p>
+            </div>
           </div>
 
-          <div class="bg-gray-900/50 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-            <h2 class="text-2xl font-bold mb-4">Портфолио</h2>
-            <ul class="space-y-3 text-gray-300">
-              <li><i class="fas fa-headphones text-amber-500 mr-2"></i> <strong>Сведение и мастеринг:</strong> альбом «Набережные» (группа «Пикник»), EP «Рассвет» (Милана Хаметова)</li>
-              <li><i class="fas fa-microphone-alt text-amber-500 mr-2"></i> <strong>Запись вокала:</strong> сингл «Ай, былмас иде» (Айдар Галимов), трек «Москва — Казань» (H1GH, Слава КПСС)</li>
-              <li><i class="fas fa-guitar text-amber-500 mr-2"></i> <strong>Аранжировка:</strong> саундтрек к короткометражному фильму «Эхо» (2024)</li>
-            </ul>
-            <div class="mt-6">
-              <h3 class="text-xl font-semibold mb-2">Аудио примеры работ</h3>
-              <div class="space-y-2">
-                <div class="audio-card p-2 rounded-xl"><span>Пример сведения (поп-трек)</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div>
-                <div class="audio-card p-2 rounded-xl"><span>Пример обработки вокала (рэп)</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div>
+          <!-- Биография и портфолио -->
+          <div class="space-y-8">
+            <div
+              class="bg-gray-900/50 rounded-2xl p-6 backdrop-blur-sm border border-white/10"
+            >
+              <h2 class="text-2xl font-bold mb-4">Биография</h2>
+              <p class="text-gray-300 leading-relaxed mb-4">
+                Артём Волков начал свой путь в музыке в 16 лет, обучаясь
+                звукорежиссуре в Казанском музыкальном училище. После окончания
+                СПбГИКиТ по специальности «Звукорежиссура аудиовизуальных
+                искусств» вернулся в Казань и открыл собственную студию. За 12
+                лет работы записал и свел более 500 треков, включая хиты,
+                попавшие в ротации «Нашего радио» и «Европы Плюс».
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                Артём специализируется на работе с вокалом, создании объёмного и
+                чистого звука. Владеет уникальной методикой обработки голоса,
+                которая позволяет раскрыть эмоциональную глубину исполнения. С
+                2020 года является техническим директором FAML Studio.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-900/50 rounded-2xl p-6 backdrop-blur-sm border border-white/10"
+            >
+              <h2 class="text-2xl font-bold mb-4">Портфолио</h2>
+              <ul class="space-y-3 text-gray-300">
+                <li>
+                  <i class="fas fa-headphones text-amber-500 mr-2"></i>
+                  <strong>Сведение и мастеринг:</strong> альбом «Набережные»
+                  (группа «Пикник»), EP «Рассвет» (Милана Хаметова)
+                </li>
+                <li>
+                  <i class="fas fa-microphone-alt text-amber-500 mr-2"></i>
+                  <strong>Запись вокала:</strong> сингл «Ай, былмас иде» (Айдар
+                  Галимов), трек «Москва — Казань» (H1GH, Слава КПСС)
+                </li>
+                <li>
+                  <i class="fas fa-guitar text-amber-500 mr-2"></i>
+                  <strong>Аранжировка:</strong> саундтрек к короткометражному
+                  фильму «Эхо» (2024)
+                </li>
+              </ul>
+              <div class="mt-6">
+                <h3 class="text-xl font-semibold mb-2">Аудио примеры работ</h3>
+                <div class="space-y-2">
+                  <div class="audio-card p-2 rounded-xl">
+                    <span>Пример сведения (поп-трек)</span
+                    ><audio controls class="w-full mt-1">
+                      <source
+                        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                        type="audio/mpeg"
+                      />
+                    </audio>
+                  </div>
+                  <div class="audio-card p-2 rounded-xl">
+                    <span>Пример обработки вокала (рэп)</span
+                    ><audio controls class="w-full mt-1">
+                      <source
+                        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+                        type="audio/mpeg"
+                      />
+                    </audio>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-black/40 py-12 mt-10">
+      <div
+        class="container mx-auto px-5 md:px-8 text-center text-gray-500 text-sm"
+      >
+        © 2025 FAML Studio — Все права защищены.
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="border-t border-white/10 bg-black/40 py-12 mt-10">
-    <div class="container mx-auto px-5 md:px-8 text-center text-gray-500 text-sm">© 2025 FAML Studio — Все права защищены.</div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
