@@ -1,0 +1,244 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #0a0c10;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f59e0b, #ec489a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -15px rgba(245, 158, 11, 0.2);
+}
+
+.audio-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1.5rem;
+  transition: 0.2s;
+}
+.audio-card:hover {
+  background: rgba(245, 158, 11, 0.1);
+}
+
+/* Слайдер с перекрестным затуханием */
+.slider-container-fade {
+  position: relative;
+  border-radius: 1.5rem;
+}
+.slider-fade-img {
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
+}
+.slider-fade-img.active {
+  opacity: 1 !important;
+  transform: scale(1.02) !important;
+  z-index: 2;
+}
+.slider-fade-img:not(.active) {
+  opacity: 0 !important;
+  transform: scale(1) !important;
+  z-index: 1;
+}
+.slider-btn {
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+.slider-btn:hover {
+  background: rgba(245, 158, 11, 0.85);
+  transform: scale(1.05);
+}
+.dot-active {
+  background: #f59e0b;
+  width: 1.8rem;
+}
+
+/* Календарь */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.calendar-day {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 10px 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.calendar-day:hover:not(.disabled-day):not(.selected-day) {
+  background: rgba(245, 158, 11, 0.2);
+  transform: scale(1.02);
+}
+.calendar-day.selected-day {
+  background: #f59e0b;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #f59e0b;
+}
+.calendar-day.disabled-day {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.calendar-day.today {
+  border: 1px solid #f59e0b;
+}
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.time-slot {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.time-slot:hover:not(.disabled-time) {
+  background: rgba(245, 158, 11, 0.3);
+  transform: scale(1.05);
+}
+.time-slot.selected-time {
+  background: #f59e0b;
+  color: black;
+}
+.time-slot.disabled-time {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.month-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.month-nav button {
+  background: rgba(245, 158, 11, 0.2);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.month-nav button:hover {
+  background: #f59e0b;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Мобильное меню - фон и анимация */
+/* Мобильное меню – начальное состояние скрыто */
+#mobileMenu {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Класс для открытого состояния */
+/* Мобильное меню */
+#mobileMenu {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+}
+#mobileMenu.open {
+  transform: translateY(0);
+}
+.-translate-y-full {
+  transform: translateY(-100%);
+}
+.translate-y-0 {
+  transform: translateY(0);
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Убираем скролл body при открытом меню */
+.menu-open {
+  overflow: hidden;
+}
+
+/* Активные ссылки (подсветка) */
+.nav-link.active,
+.mobile-nav-link.active {
+  color: #f59e0b;
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f59e0b;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-link {
+    padding: 12px 24px;
+    display: inline-block;
+    width: auto;
+  }
+  .mobile-nav-link:active {
+    transform: scale(0.98);
+  }
+}
+/* Анимация при переходе между страницами */
+.page-transition {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.page-transition.fade-out {
+  opacity: 0;
+}
+
+body {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-out;
+}
+body.page-fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+}

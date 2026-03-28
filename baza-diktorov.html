@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>FAML Studio | База дикторов и вокалистов</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-200">
+
+      <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 shadow-lg"
+    >
+      <div
+        class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center gap-2 z-20">
+          <img
+            src="img/headphone_18079960.png"
+            alt="FAML Studio Logo"
+            class="h-6 md:h-8 w-auto object-contain"
+          />
+          <span class="text-xl md:text-2xl font-black tracking-tight"
+            ><span class="text-amber-500">FAML</span> STUDIO</span
+          >
+        </a>
+
+        <nav
+          class="hidden md:flex items-center space-x-6 lg:space-x-8 font-medium"
+        >
+          <a href="index.html" class="nav-link hover:text-amber-400 transition"
+            >Главная</a
+          >
+          <a href="pesni.html" class="nav-link hover:text-amber-400 transition"
+            >Песни</a
+          >
+          <a
+            href="studija-zvukozapisi.html"
+            class="nav-link hover:text-amber-400 transition"
+            >Студия</a
+          >
+          <a
+            href="muzyka-melodija.html"
+            class="nav-link hover:text-amber-400 transition"
+            >Музыка</a
+          >
+          <a
+            href="baza-diktorov.html"
+            class="nav-link hover:text-amber-400 transition"
+            >Дикторы</a
+          >
+          <a href="#booking" class="nav-link hover:text-amber-400 transition"
+            >Бронирование</a
+          >
+        </nav>
+
+        <a
+          href="#booking"
+          class="hidden md:inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold px-5 py-2 rounded-full transition shadow-lg text-sm lg:text-base"
+          >Забронировать</a
+        >
+
+        <button
+          id="menuToggle"
+          class="md:hidden relative z-20 w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 backdrop-blur-sm border border-white/20 hover:bg-white/10 transition"
+        >
+          <i class="fas fa-bars text-2xl text-white"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out -translate-y-full md:hidden"
+      >
+       <button id="closeMenuBtn" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-500 transition z-50">
+  <i class="fas fa-times"></i>
+</button>
+        <div
+          class="flex flex-col items-center justify-center h-screen space-y-8 text-xl font-medium"
+        >
+          <a
+            href="index.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Главная</a
+          >
+          <a
+            href="pesni.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Песни</a
+          >
+          <a
+            href="studija-zvukozapisi.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Студия</a
+          >
+          <a
+            href="muzyka-melodija.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Музыка</a
+          >
+          <a
+            href="baza-diktorov.html"
+            class="mobile-nav-link hover:text-amber-400 transition"
+            >Дикторы</a
+          >
+          <a
+            href="#booking"
+            class="mobile-nav-link bg-amber-500 text-black px-8 py-3 rounded-full font-bold hover:bg-amber-600 transition"
+            >Забронировать</a
+          >
+        </div>
+      </div>
+    </header>
+
+  <main class="pt-24 md:pt-28">
+    <!-- Герой -->
+    <section class="relative overflow-hidden px-5 md:px-8 py-12 md:py-20 bg-black/60">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070')] bg-cover bg-center opacity-30"></div>
+      <div class="relative container mx-auto text-center max-w-4xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold">База дикторов <span class="gradient-text">и вокалистов</span></h1>
+        <p class="text-gray-200 text-lg md:text-xl mt-4">Профессиональные голоса для озвучки рекламы, аудиокниг, фильмов и музыкальных проектов.</p>
+      </div>
+    </section>
+
+    <!-- Женские голоса -->
+    <section class="container mx-auto px-5 md:px-8 py-16"><h2 class="text-3xl font-bold text-center mb-8">Женские <span class="gradient-text">голоса</span></h2><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"><div class="audio-card p-3"><div class="flex justify-between"><span>Алия</span><span class="text-xs text-gray-400">от 2ч</span></div><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><div class="flex justify-between"><span>Юлия К.</span><span class="text-xs text-gray-400">от 2ч</span></div><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><div class="flex justify-between"><span>Ксения Т.</span><span class="text-xs text-gray-400">от 2ч</span></div><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><div class="flex justify-between"><span>Мария</span><span class="text-xs text-gray-400">от 2ч</span></div><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><div class="flex justify-between"><span>Юлия М.</span><span class="text-xs text-gray-400">от 2ч</span></div><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><div class="flex justify-between"><span>Ольга Д.</span><span class="text-xs text-gray-400">от 2ч</span></div><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div></div></section>
+
+    <!-- Мужские голоса -->
+    <section class="bg-black/30 py-16"><div class="container mx-auto px-5 md:px-8"><h2 class="text-3xl font-bold text-center mb-8">Мужские <span class="gradient-text">голоса</span></h2><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"><div class="audio-card p-3"><span>Сергей Д.</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Антон И.</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Евгений Ж.</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Павел П.</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Артем</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Дмитрий Н.</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg"></audio></div></div></div></section>
+
+    <!-- Дикторы на татарском языке -->
+    <section class="container mx-auto px-5 md:px-8 py-16"><h2 class="text-3xl font-bold text-center mb-8">Дикторы на <span class="gradient-text">татарском языке</span></h2><div class="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto"><div class="audio-card p-3"><span>Айдар</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Лиана</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-3"><span>Марсель</span><audio controls class="w-full mt-1"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio></div></div></section>
+
+    <!-- Вокалисты -->
+    <section class="bg-black/40 py-16"><div class="container mx-auto px-5 md:px-8"><h2 class="text-3xl font-bold text-center mb-8">Вокалисты для <span class="gradient-text">музыкальных проектов</span></h2><div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto"><div><h3 class="text-xl font-semibold mb-2">Женский вокал</h3><div class="space-y-2"><div class="audio-card p-2"><span>Мария</span><audio controls class="w-full"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-2"><span>Ольга</span><audio controls class="w-full"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-2"><span>Юлия</span><audio controls class="w-full"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg"></audio></div></div></div><div><h3 class="text-xl font-semibold mb-2">Мужской вокал</h3><div class="space-y-2"><div class="audio-card p-2"><span>Михаил</span><audio controls class="w-full"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-2"><span>Александр</span><audio controls class="w-full"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio></div><div class="audio-card p-2"><span>Игорь (рэп)</span><audio controls class="w-full"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio></div></div></div></div></div></section>
+
+    <!-- Процесс заказа и преимущества -->
+    <section class="container mx-auto px-5 md:px-8 py-16"><div class="grid md:grid-cols-2 gap-8"><div><h2 class="text-2xl font-bold">Как заказать озвучку?</h2><ol class="list-decimal list-inside space-y-2 mt-4 text-gray-300"><li>Выберите голос из базы</li><li>Заполните форму с пожеланиями</li><li>Менеджер свяжется для уточнения деталей</li><li>Получите готовый аудиоролик в срок</li></ol></div><div class="bg-white/5 p-6 rounded-2xl"><h3 class="text-xl font-bold mb-3">Наши преимущества</h3><ul class="space-y-2"><li><i class="fas fa-check-circle text-amber-500 mr-2"></i> Быстрая запись (от 2 часов)</li><li><i class="fas fa-check-circle text-amber-500 mr-2"></i> Правки без дополнительной оплаты</li><li><i class="fas fa-check-circle text-amber-500 mr-2"></i> Сценарий под ключ, если нужно</li><li><i class="fas fa-check-circle text-amber-500 mr-2"></i> Работаем с юридическими и физическими лицами</li></ul></div></div></section>
+
+    <!-- Форма заявки -->
+    <section id="booking" class="container mx-auto px-5 md:px-8 py-16"><div class="bg-gray-900/50 backdrop-blur-md rounded-3xl border border-white/20 p-6 md:p-10"><h2 class="text-3xl font-bold text-center mb-8">Оставить заявку на подбор голоса</h2><form id="bookingForm" class="max-w-2xl mx-auto space-y-4"><input type="text" placeholder="Ваше имя" required class="w-full bg-black/50 border border-gray-600 rounded-xl px-4 py-3"><input type="email" placeholder="Email" required class="w-full bg-black/50 border border-gray-600 rounded-xl px-4 py-3"><textarea rows="3" placeholder="Какой тип озвучки вас интересует?" class="w-full bg-black/50 border border-gray-600 rounded-xl px-4 py-3"></textarea><button type="submit" class="bg-amber-500 hover:bg-amber-600 text-black font-bold px-8 py-3 rounded-full w-full">Отправить заявку</button></form><div id="formSuccess" class="hidden mt-6 text-center text-green-400">✅ Заявка отправлена! Менеджер свяжется с вами.</div></div></section>
+
+    <section class="container mx-auto px-5 md:px-8 py-10"><div class="bg-amber-500/10 backdrop-blur-sm rounded-3xl p-8 text-center"><h3 class="text-2xl font-bold">Нужна консультация по подбору диктора?</h3><form id="consultForm" class="mt-6 max-w-xl mx-auto flex flex-col sm:flex-row gap-3"><input type="text" placeholder="Имя" class="bg-black/50 border border-gray-600 rounded-full px-5 py-2 flex-1"><input type="tel" placeholder="Телефон" class="bg-black/50 border border-gray-600 rounded-full px-5 py-2 flex-1"><button type="submit" class="bg-amber-500 hover:bg-amber-600 text-black font-bold px-6 py-2 rounded-full">Позвоните мне</button></form></div></section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-black/40 py-12 mt-10"><div class="container mx-auto px-5 md:px-8 text-center text-gray-500 text-sm">© 2025 FAML Studio — База дикторов и вокалистов</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
